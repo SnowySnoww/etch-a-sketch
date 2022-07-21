@@ -25,9 +25,9 @@ function paint(){
 }
 function confirm(){
     let squares = parseInt(numSquares.value);
+    erase();
     if(squares >= 2 && squares <= 100){
         removeChild();
-        erase();
         color = chosenColor.value;
         grid.style.cssText = `grid-template: repeat(${squares}, 1fr) / repeat(${squares}, 1fr)`
         numSquares2.innerHTML = `x ${squares}`;
@@ -39,7 +39,6 @@ function confirm(){
             gridItem.addEventListener("mouseover", paint)
         }
     }else{
-        erase();
         warningContent.classList.add("warningContent");
         warningContent.innerText = "The number of squares must be between 2 and 100."
         warningContent.style.cssText = "background: #B33A3A; color: white; padding: 5px; border-radius: 10px;"
@@ -51,10 +50,7 @@ function confirm(){
 function removeChild(){
     if(warningActive == true){
         topContent.removeChild(warningContent);
-        erase();
-    }else{
-        erase();
-        return;
+        warningActive = false;
     }
 }
 
