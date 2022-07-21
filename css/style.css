@@ -1,0 +1,18 @@
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.grid{
+    border:2px solid black;
+    width: 70vh;
+    height: 70vh;
+    display: grid;
+}

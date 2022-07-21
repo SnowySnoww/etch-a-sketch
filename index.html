@@ -2,11 +2,29 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Etch a Sketch</title>
+        <title class="pageTitle">Etch a Sketch</title>
+        <script type="module" src="./js/scripts.js" defer></script>
         <link rel="stylesheet" href="./css/style.css">
-        <script src="./scripts/scripts.js" defer></script>
     </head>
     <body>
-        <h1>Etch a Sketch</h1>
+        <div class="content">
+            <h1 class="contentTitle">Etch a Sketch</h1>
+            <div class="topContent">
+                <label>Number of squares between 2 and 100:</label>
+                <input id="numSquares" type="number" min="2" max="100">
+                <span class="numSquaresText"></span>
+            </div>
+            <div>
+                <label for="color">Select a color</label>
+                <input type="color" id="color" name="color">
+            </div>
+            <div>
+                <button class="btnConfirm">Confirm</button>
+                <button class="btnReset">Reset</button>
+            </div>
+            <div class="grid">
+                
+            </div>
+        </div>
     </body>
 </html>
